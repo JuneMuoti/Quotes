@@ -4,5 +4,8 @@
   </h1>
 </div>
   <ol>
-    <li *ngFor='let quote of quotes'>{{quote.name}}</li>
+    <div *ngFor='let quote of quotes'>
+    <li>{{quote.name}}</li>
+    <app-quote-meaning [quote]='quote'></app-quote-meaning>
+    </div>
   </ol>

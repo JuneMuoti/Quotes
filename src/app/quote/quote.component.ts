@@ -7,10 +7,10 @@ import {Quote} from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes =[
-    new Quote(1,"Time wasted can never be recovered"),
-     new Quote(2,"Better late than never"),
-     new Quote(3,"I have so much to do that i have to spent the first few hours in prayer")
+  quotes = [
+    new Quote(1,"Time wasted can never be recovered","manage your time well,it is a precious commodity"),
+     new Quote(2,"Better late than never","what matters us you made it"),
+     new Quote(3,"I have so much to do that i have to spent the first few hours in prayer","God above all")
    ];
 
   constructor() { }
