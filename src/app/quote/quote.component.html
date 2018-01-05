@@ -4,8 +4,9 @@
   </h1>
 </div>
   <ol>
-    <div *ngFor='let quote of quotes'>
+    <div *ngFor='let quote of quotes;let i=index'>
     <li>{{quote.name}}</li>
-    <app-quote-meaning [quote]='quote'></app-quote-meaning>
+    <button (click)='toogleMeaning(i)'> Quote Meaning</button>
+    <app-quote-meaning *ngIf="quote.showMeaning"[quote]='quote'></app-quote-meaning>
     </div>
   </ol>
