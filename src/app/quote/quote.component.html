@@ -3,10 +3,15 @@
     My world of Quotes
   </h1>
 </div>
+<div class="container">
+  <div class="row">
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+  </div>
   <ol>
     <div *ngFor='let quote of quotes;let i=index'>
     <li>{{quote.name}} :Created on {{quote.dateCreated|date}}</li>
-    <button (click)='toogleMeaning(i)'> Quote Author</button>
+    <button class="btn btn-primary"(click)='toogleMeaning(i)'> Quote Author</button>
     <app-quote-meaning *ngIf="quote.showMeaning"[quote]='quote'></app-quote-meaning>
     </div>
   </ol>

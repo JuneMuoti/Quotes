@@ -14,11 +14,17 @@ export class QuoteComponent implements OnInit {
    ];
 toogleMeaning(index){
   this.quotes[index].showMeaning = !this.quotes[index].showMeaning;
+};
+addNewQuote(quote){
+  let quoteLength = this.quotes.length;
+  quote.id=quoteLength+1;
+  quote.dateCreated = new Date(quote.dateCreated)
+  this.quotes.push(quote)
 }
 
-  constructor() { }
 
-  ngOnInit() {
-  }
 
-}
+  constructor() {};
+
+  ngOnInit() {}
+};
