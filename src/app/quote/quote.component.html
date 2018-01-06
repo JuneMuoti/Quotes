@@ -5,8 +5,8 @@
 </div>
   <ol>
     <div *ngFor='let quote of quotes;let i=index'>
-    <li>{{quote.name}} :created on {{quote.dateCreated|date}}</li>
-    <button (click)='toogleMeaning(i)'> Quote Meaning</button>
+    <li>{{quote.name}} :Created on {{quote.dateCreated|date}}</li>
+    <button (click)='toogleMeaning(i)'> Quote Author</button>
     <app-quote-meaning *ngIf="quote.showMeaning"[quote]='quote'></app-quote-meaning>
     </div>
   </ol>
