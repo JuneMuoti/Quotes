@@ -21,10 +21,11 @@ addNewQuote(quote){
   quote.dateCreated = new Date(quote.dateCreated)
   this.quotes.push(quote)
 }
+constructor(){};
 
 
 
-  constructor() {};
 
-  ngOnInit() {}
+
+  ngOnInit() {};
 };
