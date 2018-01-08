@@ -14,7 +14,6 @@ Quote Quotes
     <div *ngFor='let quote of quotes;let i=index'>
     <li>{{quote.name}} :Created on {{quote.dateCreated|date}}</li>
     <button class="btn btn-primary"(click)='toogleMeaning(i)'> Quote Author</button>
-    <app-quote-meaning *ngIf="quote.showMeaning"[quote]='quote'></app-quote-meaning>
+    <app-quote-meaning *ngIf="quote.showMeaning"[quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-meaning>
     </div>
   </ol>
-  
